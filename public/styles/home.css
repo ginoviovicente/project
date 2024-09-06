@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/image/ashish-kumar-senapati-mK7gtt15Kus-unsplash\(1\).jpg');
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%; /* Full width to center horizontally */
+  margin-top: 130px;
+  background-repeat: no-repeat;
+}
+
+.logo h1 {
+  margin: 0; /* Remove default margin */
+  color: #ffffff; /* Adjust color as needed */
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  font-size: 5vw;
+}
+
+.logout-btn button{
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  height: 50px;
+  padding: 0 35px;
+  font-family: "Noto Serif JP", serif;
+}
+
+.logout-btn button:hover{
+  background-color: #4070f4cc;
+}
+.logout-btn button:active{
+  background-color: #235cf7c5;
+}

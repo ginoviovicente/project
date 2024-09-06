@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@200..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/login.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="logo">
+    <h1>BLOG</h1>
+  </div>
+  <div class="container">
+    <div class="forms">
+      <div class="form login">
+        <span class="title">Login</span>
+            <div class="error">
+              <%   if(messages.error) { %>
+              <%= messages.error %>
+              <% } %> 
+            </div>
+        <form action="/login" method="POST">
+          <div class="input-field">
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+              <i class="uil uil-at"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="passwords" id="password" name="password" required placeholder="Enter your password" >
+            <i class="uil uil-padlock"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+
+          <div class="checkbox-text">
+            <div class="checkbox-content">
+              <input type="checkbox" id="logCheck">
+              <label for="logCheck" class="text">Remember me</label>
+            </div>
+
+            <a href="#" class="text">Forgot password?</a>
+          </div>
+
+          <div class="input-field button">
+            <input type="submit" value="Login Now">
+          </div>
+
+        </form>
+
+        <div class="login-signup">
+          <span class="text">Don't have an account? 
+            <a href="#" class="text signup-link">Signup now</a>
+          </span>
+        </div>
+      </div>
+
+<!----------------------Regist Form----------------------->
+
+      <div class="form signup">
+        <span class="title">Registration</span>
+
+        <form action="/register" method="POST">
+          <div class="input-field">
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+              <i class="uil uil-at"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" class="passwords" id="password" name="password" required placeholder="Enter your password" minlength="6">
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+
+          <div class="input-field button">
+            <input type="submit" value="Submit">
+          </div>
+
+        </form>
+
+        <div class="login-signup">
+          <span class="text">Already have an account?
+            <a href="#" class="text login-link">Login now</a>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
+
